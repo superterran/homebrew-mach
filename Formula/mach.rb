@@ -5,18 +5,18 @@
 class Mach < Formula
   desc "Mach is a cli application for using docker to *quickly* and *easily* manage infrastructure and services through code."
   homepage "https://superterran.net/mach/"
-  version "0.5.8"
+  version "0.5.9"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/superterran/mach/releases/download/v0.5.8/mach_0.5.8_darwin_amd64.tar.gz"
-      sha256 "a28b6f1cc2ab61e63bb1923250e71c7e5a0f9dbb0ae652d82e3b70542ae83647"
+      url "https://github.com/superterran/mach/releases/download/v0.5.9/mach_0.5.9_darwin_amd64.tar.gz"
+      sha256 "58016719d1b0493876c88ecf4f15bb8052f3142a4e84c810d7769b4d3f7c10e6"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/superterran/mach/releases/download/v0.5.8/mach_0.5.8_darwin_arm64.tar.gz"
-      sha256 "5515324a83103140f10f47bfb2d878511f4eac9c45621bdd57e04e15b9518ae7"
+      url "https://github.com/superterran/mach/releases/download/v0.5.9/mach_0.5.9_darwin_arm64.tar.gz"
+      sha256 "bff089cd37fb6feeeaa9fa51f8df53f3fb075ec239f63ce9dd7df58b20ebd55a"
     end
 
     depends_on arch: [:x86_64, :aarch64]
@@ -24,12 +24,12 @@ class Mach < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/superterran/mach/releases/download/v0.5.8/mach_0.5.8_linux_amd64.tar.gz"
-      sha256 "5d15314dfbcd68d9dd0f3590ed738752ee8ef946ed5aa548d1c6e1775e0ea9e4"
+      url "https://github.com/superterran/mach/releases/download/v0.5.9/mach_0.5.9_linux_amd64.tar.gz"
+      sha256 "d25faddded7d328c328ade2b1bf10dcf503c507ddb282d9422f05f8a2c05c705"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/superterran/mach/releases/download/v0.5.8/mach_0.5.8_linux_arm64.tar.gz"
-      sha256 "a73816ff634342e2e05dc9f8e8e1b92210550bb9d1b9231d8a462d24b473c3c9"
+      url "https://github.com/superterran/mach/releases/download/v0.5.9/mach_0.5.9_linux_arm64.tar.gz"
+      sha256 "3e2a5aa7c0d0fae656f941d9177d410d55b7f2c08daf0c87e636f78c9d2c03cf"
     end
 
     depends_on arch: [:x86_64, :aarch64]
@@ -41,7 +41,6 @@ class Mach < Formula
 
   def install
     bin.install "mach"
-    ...
   end
 
   def caveats; <<~EOS
@@ -50,7 +49,6 @@ class Mach < Formula
   end
 
   test do
-    system "#{bin}/mach --version"
-    ...
+    system "#{bin}/mach -h"
   end
 end
