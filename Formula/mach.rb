@@ -5,18 +5,18 @@
 class Mach < Formula
   desc "Mach is a cli application for using docker to *quickly* and *easily* manage infrastructure and services through code."
   homepage "https://superterran.net/mach/"
-  version "0.5.9"
+  version "0.5.10"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/superterran/mach/releases/download/v0.5.9/mach_0.5.9_darwin_amd64.tar.gz"
-      sha256 "58016719d1b0493876c88ecf4f15bb8052f3142a4e84c810d7769b4d3f7c10e6"
+      url "https://github.com/superterran/mach/releases/download/v0.5.10/mach_0.5.10_darwin_amd64.tar.gz"
+      sha256 "b4b3c7883ed743f4b097640a42ac02b0c71208dcbc77335fa5a06f586253decc"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/superterran/mach/releases/download/v0.5.9/mach_0.5.9_darwin_arm64.tar.gz"
-      sha256 "bff089cd37fb6feeeaa9fa51f8df53f3fb075ec239f63ce9dd7df58b20ebd55a"
+      url "https://github.com/superterran/mach/releases/download/v0.5.10/mach_0.5.10_darwin_arm64.tar.gz"
+      sha256 "3cf5240e4b522c34cf4b65c0c7384274bc76dd13691a459b220284bc8509f779"
     end
 
     depends_on arch: [:x86_64, :aarch64]
@@ -24,12 +24,12 @@ class Mach < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/superterran/mach/releases/download/v0.5.9/mach_0.5.9_linux_amd64.tar.gz"
-      sha256 "d25faddded7d328c328ade2b1bf10dcf503c507ddb282d9422f05f8a2c05c705"
+      url "https://github.com/superterran/mach/releases/download/v0.5.10/mach_0.5.10_linux_amd64.tar.gz"
+      sha256 "78bf8c187640ba603a9b0798d2bf948b9ea16dd60b22d3fa427d5e38d899802f"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/superterran/mach/releases/download/v0.5.9/mach_0.5.9_linux_arm64.tar.gz"
-      sha256 "3e2a5aa7c0d0fae656f941d9177d410d55b7f2c08daf0c87e636f78c9d2c03cf"
+      url "https://github.com/superterran/mach/releases/download/v0.5.10/mach_0.5.10_linux_arm64.tar.gz"
+      sha256 "a9e8b7d2f60a5a6d2498df08dbc6576a1fb7f4c9895f92f14c34d32bce9818e3"
     end
 
     depends_on arch: [:x86_64, :aarch64]
