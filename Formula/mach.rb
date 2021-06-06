@@ -11,23 +11,23 @@ class Mach < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/superterran/mach/releases/download/0.5.19/mach_0.5.19_darwin_amd64.tar.gz"
-      sha256 "feb16697fe35865b5bd2e7ac0e2c437cef810e6977ff08596e4a158bef560028"
+      url "https://github.com/superterran/mach/releases/download/v0.5.19/mach_0.5.19_darwin_amd64.tar.gz"
+      sha256 "3a227b155a6173958e0ffde56c12790c8ba566f871207617f9053a2dbab117fc"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/superterran/mach/releases/download/0.5.19/mach_0.5.19_darwin_arm64.tar.gz"
-      sha256 "ea92e6ab927c0eefd3acc3ed1ff848a435aa348384a0ee2b62f2e28df908648a"
+      url "https://github.com/superterran/mach/releases/download/v0.5.19/mach_0.5.19_darwin_arm64.tar.gz"
+      sha256 "b703a76c86b58e2a0aa368ec20d9ee0f9c831c558c1a66c19c34c2c3340c3181"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/superterran/mach/releases/download/0.5.19/mach_0.5.19_linux_amd64.tar.gz"
-      sha256 "5c71fd948c5144494e83fed2b1ef1bccfb1f39c6b705f8dde85caacc29684bd3"
+      url "https://github.com/superterran/mach/releases/download/v0.5.19/mach_0.5.19_linux_amd64.tar.gz"
+      sha256 "1593e54d9aba0a3658e43ad77dbd2aa6c0f06d3d5371d4969da49e94e6b04013"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/superterran/mach/releases/download/0.5.19/mach_0.5.19_linux_arm64.tar.gz"
-      sha256 "af79ffd319ba189c5a66514657d9a1ef3e35d4abbd43fa13baa36511bea23ce4"
+      url "https://github.com/superterran/mach/releases/download/v0.5.19/mach_0.5.19_linux_arm64.tar.gz"
+      sha256 "9075eff5f91a5829e2cc7eead7c0b6f0942b3969893dfa7199b5db8a0fea068b"
     end
   end
 
