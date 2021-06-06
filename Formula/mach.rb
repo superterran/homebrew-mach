@@ -5,34 +5,30 @@
 class Mach < Formula
   desc "Mach is a cli application for using docker to *quickly* and *easily* manage infrastructure and services through code."
   homepage "https://superterran.net/mach/"
-  version "0.5.10"
+  version "0.5.11"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/superterran/mach/releases/download/v0.5.10/mach_0.5.10_darwin_amd64.tar.gz"
-      sha256 "b4b3c7883ed743f4b097640a42ac02b0c71208dcbc77335fa5a06f586253decc"
+      url "https://github.com/superterran/mach/releases/download/v0.5.11/mach_0.5.11_darwin_amd64.tar.gz"
+      sha256 "7cb60cfa65413a347bc82e0a14597a6d55147e278a272bae59f6d1dbb0c1121d"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/superterran/mach/releases/download/v0.5.10/mach_0.5.10_darwin_arm64.tar.gz"
-      sha256 "3cf5240e4b522c34cf4b65c0c7384274bc76dd13691a459b220284bc8509f779"
+      url "https://github.com/superterran/mach/releases/download/v0.5.11/mach_0.5.11_darwin_arm64.tar.gz"
+      sha256 "db7baf9d7584668f856f9cb4ef8617ff96569d6620c772ed25a37ccfd27ada8e"
     end
-
-    depends_on arch: [:x86_64, :aarch64]
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/superterran/mach/releases/download/v0.5.10/mach_0.5.10_linux_amd64.tar.gz"
-      sha256 "78bf8c187640ba603a9b0798d2bf948b9ea16dd60b22d3fa427d5e38d899802f"
+      url "https://github.com/superterran/mach/releases/download/v0.5.11/mach_0.5.11_linux_amd64.tar.gz"
+      sha256 "13bbff38e9f5b8f0bbdb916cfb8c0e45f7b4683912180c41acefa3bef9007a49"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/superterran/mach/releases/download/v0.5.10/mach_0.5.10_linux_arm64.tar.gz"
-      sha256 "a9e8b7d2f60a5a6d2498df08dbc6576a1fb7f4c9895f92f14c34d32bce9818e3"
+      url "https://github.com/superterran/mach/releases/download/v0.5.11/mach_0.5.11_linux_arm64.tar.gz"
+      sha256 "74a3a6da892680ad81a595473a10e045ded560008aa978212a9eca50cdae6e8c"
     end
-
-    depends_on arch: [:x86_64, :aarch64]
   end
 
   depends_on "docker" => :optional
