@@ -5,29 +5,29 @@
 class Mach < Formula
   desc "Mach is a cli application for using docker to *quickly* and *easily* manage infrastructure and services through code."
   homepage "https://superterran.net/mach/"
-  version "0.5.11"
+  version "0.5.12"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/superterran/mach/releases/download/v0.5.11/mach_0.5.11_darwin_amd64.tar.gz"
-      sha256 "7cb60cfa65413a347bc82e0a14597a6d55147e278a272bae59f6d1dbb0c1121d"
+      url "https://github.com/superterran/mach/releases/download/v0.5.12/mach_0.5.12_darwin_amd64.tar.gz"
+      sha256 "d8526d15294b8e55edb77447ce5c99bb373908312f7175b89f454a3f74b53d79"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/superterran/mach/releases/download/v0.5.11/mach_0.5.11_darwin_arm64.tar.gz"
-      sha256 "db7baf9d7584668f856f9cb4ef8617ff96569d6620c772ed25a37ccfd27ada8e"
+      url "https://github.com/superterran/mach/releases/download/v0.5.12/mach_0.5.12_darwin_arm64.tar.gz"
+      sha256 "330207ea1246bcd8ab8f831d88565a31df433656de57229f7757aecd4b5630a7"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/superterran/mach/releases/download/v0.5.11/mach_0.5.11_linux_amd64.tar.gz"
-      sha256 "13bbff38e9f5b8f0bbdb916cfb8c0e45f7b4683912180c41acefa3bef9007a49"
+      url "https://github.com/superterran/mach/releases/download/v0.5.12/mach_0.5.12_linux_amd64.tar.gz"
+      sha256 "f694ecf7fcd5bc841fdabcebf875c840521b9681c43434165a6e14c225bbb8ce"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/superterran/mach/releases/download/v0.5.11/mach_0.5.11_linux_arm64.tar.gz"
-      sha256 "74a3a6da892680ad81a595473a10e045ded560008aa978212a9eca50cdae6e8c"
+      url "https://github.com/superterran/mach/releases/download/v0.5.12/mach_0.5.12_linux_arm64.tar.gz"
+      sha256 "5b0a52b243ce004aba54f7c677131020bb0b8e904b4f9157ed504b2274977dfe"
     end
   end
 
