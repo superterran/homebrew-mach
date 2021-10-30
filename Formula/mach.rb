@@ -5,21 +5,21 @@
 class Mach < Formula
   desc "Mach is a cli application for using docker to *quickly* and *easily* manage infrastructure and services through code."
   homepage "https://superterran.net/mach/"
-  version "0.5.28"
+  version "0.5.29"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/superterran/mach/releases/download/v0.5.28/mach_0.5.28_darwin_arm64.tar.gz"
-      sha256 "b9b55932e779c35239b1f0a56ef40322d46fc20debc5e5620548b9e9dfdf33de"
+      url "https://github.com/superterran/mach/releases/download/v0.5.29/mach_0.5.29_darwin_arm64.tar.gz"
+      sha256 "fda9601b7c12ada2d23faaa1b5e00bcff5706ecc7bfafbe2737a1127f7b6264e"
 
       def install
         bin.install "mach"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/superterran/mach/releases/download/v0.5.28/mach_0.5.28_darwin_amd64.tar.gz"
-      sha256 "60e7ba2cce97a2b7dbaa7b5b289e4300970ec123019316ff9923625f82e5b92e"
+      url "https://github.com/superterran/mach/releases/download/v0.5.29/mach_0.5.29_darwin_amd64.tar.gz"
+      sha256 "1a8dcefc2fbbcad05dfea6c047a52f3a4617d5aefed7eb651d7476a5b76b6726"
 
       def install
         bin.install "mach"
@@ -29,16 +29,16 @@ class Mach < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/superterran/mach/releases/download/v0.5.28/mach_0.5.28_linux_arm64.tar.gz"
-      sha256 "2185158909abb159277a5cc95a1b2a748f6a9260f84bf9659aa12c92271d6483"
+      url "https://github.com/superterran/mach/releases/download/v0.5.29/mach_0.5.29_linux_arm64.tar.gz"
+      sha256 "b37994e765c3990eb396164cc8f243cb0630321e3a4bba129741c011db89cd3a"
 
       def install
         bin.install "mach"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/superterran/mach/releases/download/v0.5.28/mach_0.5.28_linux_amd64.tar.gz"
-      sha256 "6f016f84d0d122f0261f945f4c1e7b6196ecb0a7f70bb9fc21526f8c01a496bc"
+      url "https://github.com/superterran/mach/releases/download/v0.5.29/mach_0.5.29_linux_amd64.tar.gz"
+      sha256 "e097cae69e9e9264341374dedcde90294dd77bc7d7c1f667393e01c1f165a316"
 
       def install
         bin.install "mach"
